@@ -15,13 +15,6 @@ contract("BetaKreativVip", (accounts) => {
     console.log("contract", contract.address);
   });
 
-  it("can mint", async () => {
-    await contract.mint(accounts[0], 100);
-    const bal = await contract.balanceOf(accounts[0]);
-
-    assert.equal(bal, 100);
-  });
-
   it("can drop", async () => {
     const quantity = 10;
 

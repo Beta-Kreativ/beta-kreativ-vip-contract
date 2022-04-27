@@ -18,11 +18,7 @@ contract BetaKreativVip is ERC721A, Ownable {
     string public baseURI = "";
 
     constructor() ERC721A("Beta Kreativ Vip", "BKVIP") {}
-
-    function mint(address _address, uint256 _quantity) external onlyOwner {
-        _safeMint(_address, _quantity);
-    }
-
+    
     function airdrop(address[] memory _addresses, uint256 _quantity)
         external
         onlyOwner
